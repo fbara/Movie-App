@@ -13,6 +13,7 @@
 		AD26432E23EC95D0002BBF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD26432D23EC95D0002BBF86 /* Assets.xcassets */; };
 		AD26433123EC95D0002BBF86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD26433023EC95D0002BBF86 /* Preview Assets.xcassets */; };
 		AD26433423EC95D0002BBF86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD26433223EC95D0002BBF86 /* LaunchScreen.storyboard */; };
+		AD26433C23EC98E6002BBF86 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26433B23EC98E6002BBF86 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AD26433023EC95D0002BBF86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD26433323EC95D0002BBF86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD26433523EC95D0002BBF86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD26433B23EC98E6002BBF86 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				AD26432723EC95CD002BBF86 /* AppDelegate.swift */,
 				AD26432923EC95CD002BBF86 /* SceneDelegate.swift */,
 				AD26432B23EC95CD002BBF86 /* ContentView.swift */,
+				AD26433B23EC98E6002BBF86 /* DetailView.swift */,
 				AD26432D23EC95D0002BBF86 /* Assets.xcassets */,
 				AD26433223EC95D0002BBF86 /* LaunchScreen.storyboard */,
 				AD26433523EC95D0002BBF86 /* Info.plist */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD26432823EC95CD002BBF86 /* AppDelegate.swift in Sources */,
+				AD26433C23EC98E6002BBF86 /* DetailView.swift in Sources */,
 				AD26432A23EC95CD002BBF86 /* SceneDelegate.swift in Sources */,
 				AD26432C23EC95CD002BBF86 /* ContentView.swift in Sources */,
 			);
