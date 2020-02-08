@@ -10,27 +10,16 @@ import SwiftUI
 
 struct DetailView: View {
     var body: some View {
-        ScrollView(.vertical) {
+        ScrollView(.vertical, showsIndicators: true) {
             PosterView()
             TitleView()
             FilmInfoView()
             RatingsView()
             PlotView()
-            
-            HStack {
-                Text("Cast")
-                Spacer()
-                
-                Button(action: {
-                    //
-                }) {
-                    Text("See all")
-                }
-                .padding()
-                .foregroundColor(.secondary)
-                .clipShape(Capsule())
-            }
+            CastView()
+            PurchaseButtonView()
         }
+        .navigationBarTitle("", displayMode: .inline)
     }
 }
 
@@ -103,5 +92,58 @@ struct PlotView: View {
             Text ("All seems well on the island of Berk as Vikings and dragons live together in peace and harmony. Now a Viking leader, Hiccup finds himself increasingly attracted to Astrid, while his beloved dragon Toothless meets an enchanting creature who captures his eye. When the evil Grimmel launches a devious plan to wipe out all the dragons, Hiccup must unite both clans to find Caldera, a hidden land that holds the key to saving Toothless and his flying friends.")
         }
         .padding()
+    }
+}
+
+struct CastView: View {
+    var body: some View {
+        VStack {
+            HStack {
+                Text("Cast")
+                Spacer()
+                
+                Button(action: seeAllButton) {
+                    Text("See all")
+                }
+            }
+            .padding()
+            
+            ScrollView(.horizontal, showsIndicators: true) {
+                HStack {
+                    ForEach(0..<12) { item in
+                        HStack {
+                            VStack{
+                                Image(systemName: "person.crop.circle")
+                                    .font(.system(size: 60))
+                                Text("Some\nPerson")
+                                    .fontWeight(.semibold)
+                            }
+                            .padding()
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func seeAllButton() {
+        print("See all")
+    }
+}
+
+struct PurchaseButtonView: View {
+    var body: some View {
+        NavigationLink(destination: Text("Coming soon")) {
+            Text("PURCHASE")
+                .font(.title)
+                .fontWeight(.heavy)
+                .padding()
+                .frame(width: UIScreen.main.bounds.width - 24)
+                .foregroundColor(.white)
+                .background(Color.purple)
+                .clipShape(Capsule())
+                .padding()
+            
+        }
     }
 }
