@@ -10,11 +10,26 @@ import SwiftUI
 
 struct DetailView: View {
     var body: some View {
-        VStack {
+        ScrollView(.vertical) {
             PosterView()
             TitleView()
             FilmInfoView()
             RatingsView()
+            PlotView()
+            
+            HStack {
+                Text("Cast")
+                Spacer()
+                
+                Button(action: {
+                    //
+                }) {
+                    Text("See all")
+                }
+                .padding()
+                .foregroundColor(.secondary)
+                .clipShape(Capsule())
+            }
         }
     }
 }
@@ -71,5 +86,22 @@ struct RatingsView: View {
             Spacer()
         }
         .foregroundColor(.yellow)
+    }
+}
+
+struct PlotView: View {
+    var body: some View {
+        VStack {
+            HStack {
+                Text("Storyline")
+                    .fontWeight(.bold)
+                
+                Spacer()
+            }
+            .padding(.bottom)
+            
+            Text ("All seems well on the island of Berk as Vikings and dragons live together in peace and harmony. Now a Viking leader, Hiccup finds himself increasingly attracted to Astrid, while his beloved dragon Toothless meets an enchanting creature who captures his eye. When the evil Grimmel launches a devious plan to wipe out all the dragons, Hiccup must unite both clans to find Caldera, a hidden land that holds the key to saving Toothless and his flying friends.")
+        }
+        .padding()
     }
 }
